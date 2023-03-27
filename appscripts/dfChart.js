@@ -81,7 +81,7 @@
                             },
                             title: {
                                 display: true,
-                                text: ['Singapore Newly Born Population Size','in Recent Five Years','(will change into 20 years in final version)'],
+                                text: ['Singapore Newly Born Population Size','in Recent 5 Years','(will change into 20 years in final version)'],
                                 fontFamily: "TrebuchetMS",
                                 fontSize: 24,
                                 fontColor: 'rgb(20,20,20)',
@@ -102,7 +102,7 @@
                             //},
                             //title: {
                                 //display: true,
-                                //text: ['Singapore Population Race Composition','in Recent Five Years'],
+                                //text: ['Singapore Population Race Composition','in Recent 5 Years'],
                                 //fontFamily: "TrebuchetMS",
                                 //fontSize: 24,
                                 //fontColor: 'rgb(20,20,20)',
