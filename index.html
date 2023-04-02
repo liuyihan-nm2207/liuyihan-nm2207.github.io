@@ -9,8 +9,9 @@
 <body>
     <p> <a href="https://docs.google.com/document/d/1A8WLb_8WC6yvJannCS6Ya7odgN1N77Z2swoBOf81cH4/edit"> Here is a link </a> to the project document. </p>
     <p> <a href="https://docs.google.com/document/d/1jUMnRAsDk5DvvnG-OCRl-b5ofF-51nJbJYD52naq998/edit"> Here is a link </a> to week 10 diary. </p>
+    <p> <a href="https://docs.google.com/document/d/1nM6h1BfRl0_x9JhNnxJPO7TLA4x49ZkgTrjUX5lg-F4/edit"> Here is a link </a> to week 11 diary. </p>
 
-<h1> The Changes of Population Structure in Singapore </h1>
+<h1> Singapore's Population Structure </h1>
 
 <p> </p>
 <h2> Introduction </h2>
@@ -20,31 +21,56 @@ Therefore, I intend to design a data story to show my audience the current demog
 
 </div>
 
-<h2> Population Overview</h2>
-<div id="popSize">
-    <canvas id="PopSize-bar-chart" width="400" height="400"></canvas> 
-</div>
+<h2> Part 1: Characteristics of Singapore's Demographic Structure</h2> 
+      -race 
+        Singapore is a multi-ethnic nation. [Using a bar chart to show ethnical population composition, it will be like:
+        <img src="resources/populationPyramid2002.png" width="300" >]
+      -gender
+        [Using a pie chart to show the almost identical ratio of men to women]
+      -citizen/pr/other
+        Singapore's residents are composed by 'Citizen', 'Permanent Residents' and 'Other'. Singapore has a high percentage of permanent residents compared to many countries. [Also will use a pie chart]
+      -age 
+        The average age of Singapore's population is older, or in other words, people live longer and the elderly occupy a larger proportion of the total population
+        [Will also use a pie chart]
+      -(highest education level) [bar chart or pie chart]
 
-<div id="popNewBorn">
-    <canvas id="PopNewBorn-bar-chart" width="400" height="400"></canvas> 
-</div>
+
+<h2> Part 2: Changes and Challenges </h2>
+      -later marriage [line chart]
+      -lower marriage rate [line chart]
+       Singapore's more traditional culture and stricter marriage laws result in very few children being born outside of marriage, so 
+      -lower fertility rate [line chart]
+       The decrease in fertility rate leads to
+      -negative population growth [2 line charts (one for population size and one for population growth rate)]
+                 <div id="popSize">
+                 <canvas id="PopSize-bar-chart" width="400" height="400"></canvas> 
+                 </div>
+
+      -distorted population structure [interactive population pyramids]
+        <img src="resources/populationPyramid2002.png" width="300" >
+        <img src="resources/populationPyramid2022.png" width="300" >
+
+
+        <div></div>
+        <div class="slidecontainer">
+        <input type="range" min="0" max="1" value="slider" step="0.01" class="slider" id="myRange">
+        Drag this bar to see how Singapore's population structure changed from 1970 to 2020
+        </div>
+        <div> (Now this part is not finished yet. In my final version I will link each year's population pyramid to a position on the bar. In this way, when audiences drag the bar, they can feel more directly that the bottom of the pyramid is narrowing while the middle and upper part is widening, which represents the shrinking of the young population and the gradual increase of the old population.)
+
+
     
-<div> This is a storyboard for the chart of new born population<img src="resources/storyboard.jpg" width="300" > </div>
-
-<h2> How does the sturcture changed </h2>
-<img src="resources/populationPyramid2002.png" width="300" >
-<img src="resources/populationPyramid2022.png" width="300" >
 
 
-<div></div>
-<div class="slidecontainer">
-    <input type="range" min="0" max="1" value="slider" step="0.01" class="slider" id="myRange">
-    Drag this bar to see how Singapore's population structure changed from 2002 to 2022
-</div>
-<div> (Now this part is not finished yet. In my final version I will link each year's population pyramid to a position on the bar. In this way, when audiences drag the bar, they can feel more directly that the bottom of the pyramid is narrowing while the middle and upper part is widening, which represents the shrinking of the young population and the gradual increase of the old population.)
- 
-<h2> Analysis </h2>
-<h2> Conclusion </h2>
+
+
+<h2> Part 3: Comparison and Future </h2>
+     Will compare demographic changes, birth rates, and length of parental leave for new fathers and mothers in Singapore and Sweden in recent years. 
+       This part will be like: 
+            - Using bar charts to show the difference in parental leave duration between Sweden and Singapore
+            - Using two pie charts to compare the childcare workload of fathers and mothers in each of these two countries
+    
+     Then suggest possible solutions of Singapore's demographic problem (for example, providing social support for new mothers and building a more gender-equal family environment to make sure female Singaporeans are willing to have children).
 <h2> References </h2>
 
 </body>
