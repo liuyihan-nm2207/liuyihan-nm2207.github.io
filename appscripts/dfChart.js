@@ -1,12 +1,15 @@
     
-    const labelYear = ["2018","2019","2020","2021","2022"]
+
     const labelRace = ["Chinese","Malay","Indian","Other"]
     const labelAge = ["Chinese","Malay","Indian","Other"]
     const populationNewBorn = ["32413 ","32844","31816","31713","35724"]
     const populationRace = ["3018951","554110","366405","133773"]
     const populationAge = ["3018951","554110","366405","133773"]
-    const populationSize= ["3994283","4026209","4044210","3986842","4073239"]
     const populationCon = ["2018","2019","2020","2021","2022"]
+    
+    const labelYear = ["1970","1975","1980","1985","1990","1995","2000","2005","2010","2015","2020"]
+    const populationSize= ["2070000","2410000","3050000","4030000","5080000", "5690000"]
+    const populationGrowth= ["1.6","1.5","1.3","0.1","3.9","3.0","1.7","2.4","1.8", "1.2","-4.2"]
     
    
     
@@ -14,8 +17,8 @@
         labels: labelYear,
         datasets: [
             {
-                label: "Population Size",
-                data: populationSize,
+                    label: "Population Growth",
+                data: populationGrowth,
                 borderWidth: 2,
                 backgroundColor: "rgb(20,150,150)",
                 borderColor: "rgb(50,150,150)"
@@ -26,7 +29,7 @@
     
     new Chart("PopSize-bar-chart",
             {
-                type: "bar",
+                type: "line",
                 data: dataObj,
                 options: { 
                     maintainAspectRatio: false,
@@ -35,7 +38,7 @@
                     },
                     title: {
                         display: true,
-                        text: ['Singapore Population Size','in Recent Five Years','(will change into 20 years in final version)'],
+                        text: ['Singapore Population Growth Rate','in Recent 50 Years'],
                         fontFamily: "TrebuchetMS",
                         fontSize: 24,
                         fontColor: 'rgb(20,20,20)',
