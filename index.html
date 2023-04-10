@@ -1,82 +1,200 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/appstyle.css">
-    <script defer type="text/javascript" src="appscripts/dfChart.js">
-        </script>
+<title>Population Structure</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+<script defer type="text/javascript" src="appscripts/dfChart.js">
+</script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("resources/mb2.jpg");
+  min-height: 75%;
+}
+
+.menu {
+  display: none;
+}
+
+
+</style>
 </head>
+
 <body>
-    <p> <a href="https://docs.google.com/document/d/1A8WLb_8WC6yvJannCS6Ya7odgN1N77Z2swoBOf81cH4/edit"> Here is a link </a> to the project document. </p>
-    <p> <a href="https://docs.google.com/document/d/1jUMnRAsDk5DvvnG-OCRl-b5ofF-51nJbJYD52naq998/edit"> Here is a link </a> to week 10 diary. </p>
-    <p> <a href="https://docs.google.com/document/d/1nM6h1BfRl0_x9JhNnxJPO7TLA4x49ZkgTrjUX5lg-F4/edit"> Here is a link </a> to week 11 diary. </p>
-    <p> <a href="https://docs.google.com/document/d/1J82u6HuDDVi2Rzd3fhkwf-wjO9iFaBn9SEwimJ4xGrE/edit"> Here is a link </a> to week 12 diary. </p>
 
-<h1> Singapore's Population Structure </h1>
-
-<p> </p>
-<h2> Introduction </h2>
-<div> Singapore, like many countries in the world, is facing a demographic shift. With both fertility and mortality rates declining, Singapore's young population is declining year by year, while the number of middle-aged and elderly people is increasing annually. According to the World Bank, the age dependency ratio in Singapore has arrived 35.35 % in 2021. This means that young people are under more pressure to support the elderly. Without intervention, this ratio will continue to increase in the future, which puts a huge financial and psychological burden on young people and hinders socio-economic development.
-
-Therefore, I intend to design a data story to show my audience the current demographic situation of Singapore, the changes it has undergone in recent decades, and its major problems. I hope that my data story will raise more people's awareness on the demographic issues.
-
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#introduction" class="w3-button w3-block w3-black">Introduction</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#partOne" class="w3-button w3-block w3-black">Part 1: Characteristics</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#partTwo" class="w3-button w3-block w3-black">Part 2: Changes and Challenges</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#partThree" class="w3-button w3-block w3-black">Part 3: Comparison and Future</a>
+    </div>
+  </div>
 </div>
 
-<h2> Part 1: Characteristics of Singapore's Demographic Structure</h2> 
-      <div> <p>-race </p>
-        <p>Singapore is a multi-ethnic nation. [Using a bar chart to show ethnical population composition, it will be like: </p>
-       <p> <img src="resources/raceComposition.png" width="300" >] </p> </div>
-      <div>-gender [Using a pie chart to show the almost identical ratio of men to women] </div>
-       
-      <div><p>-citizen/pr/other [Also will use a pie chart]</p>
-      <p> Singapore's residents are composed by 'Citizen', 'Permanent Residents' and 'Other'. Singapore has a high percentage of permanent residents compared to many countries. 
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag"></span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="font-size:60px">Singapore's<br>Population Structure</span>
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-text-white"> </span>
+  </div>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- Intro Container -->
+<div class="w3-container" id="introduction">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">Introduction</span></h5>
+    <p>Singapore, like many countries in the world, is facing a demographic shift. With both fertility and mortality rates declining, Singapore's young population is declining year by year, while the number of middle-aged and elderly people is increasing annually. According to the World Bank, the age dependency ratio in Singapore has arrived 35.35 % in 2021. This means that young people are under more pressure to support the elderly. Without intervention, this ratio will continue to increase in the future, which puts a huge financial and psychological burden on young people and hinders socio-economic development. </p>
+    <p>Therefore, I intend to design a data story to show my audience the current demographic situation of Singapore, the changes it has undergone in recent decades, and its major problems. I hope that my data story will raise more people's awareness on the demographic issues.</p>
+
+    
+  </div>
+</div>
+
+<!-- Part1 Container -->
+<div class="w3-container" id="partOne">
+    <div class="w3-content" style="max-width:700px">
+      <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">Part 1: Characteristics of Singapore's Demographic Structure</span></h5>
+      <p></p>
+      <p></p>
+      <div class="w3-panel w3-leftbar w3-light-grey">
+        <p><i>"Singapore is a multiracial, multiethnic, and multicultural Asian society...... However, Singapore is facing the threat of an ageing population compounded further by a low fertility rate." </i></p>
+        <p>-Statista</p>
       </div>
-      <div> <p>-age  [bar chart or pie chart]</p> 
-        <p>The average age of Singapore's population is older, or in other words, people live longer and the elderly occupy a larger proportion of the total population </p>
-        </div>
-      -(highest education level) [bar chart or pie chart]
+      
+      <p><strong>Race Composition:</strong> </p>
+      <img src="resources/raceComposition.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="1000" height="666">
+          
+
+      <p><strong>Resident Composition:</strong> </p>
+      
+      <p><strong>Gender Composition:</strong> </p>
+      <p><strong>Age Composition:</strong> </p>
+
+    </div>
+  </div>
 
 
-<h2> Part 2: Changes and Challenges </h2>
-      <p>-later marriage [line chart]</p>
-      <p>-lower marriage rate [line chart]</p>
-       <p>Singapore's more traditional culture and stricter marriage laws result in very few children being born outside of marriage, so </p>
-      <p>-lower fertility rate [line chart]</p>
-       <p>The decrease in fertility rate leads to </p>
-      <p>-negative population growth [line chart (population growth rate)] </p>
+<!-- Part2 Container -->
+<div class="w3-container" id="partTwo">
+    <div class="w3-content" style="max-width:700px">
+      <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">Part 2: Changes and Challenges</span></h5>
+      <p></p>
+      <p></p>
+      <div class="w3-panel w3-leftbar w3-light-grey">
+        <p><i></i></p>
+        <p></p>
+      </div>
+      <p><strong>Negative Population Growth</strong> </p>
                  <div id="popGrowth">
                  <canvas id="PopSize-bar-chart" width="400" height="400"></canvas> 
                  </div>
-    
 
-        <p> and </p>
-
-      <p>-distorted population structure [interactive population pyramids]</p>
-        <img src="resources/populationPyramid2002.png" width="300" >
-        <img src="resources/populationPyramid2022.png" width="300" >
-
-
-        <div></div>
+      <p><strong>Changing Population Pyramids</strong> </p>
         <div class="slidecontainer">
         <input type="range" min="0" max="1" value="slider" step="0.01" class="slider" id="myRange">
         Drag this bar to see how Singapore's population structure changed from 1970 to 2020
         </div>
-        <div> (Now this part is not finished yet. In my final version I will link each year's population pyramid to a position on the bar. In this way, when audiences drag the bar, they can feel more directly that the bottom of the pyramid is narrowing while the middle and upper part is widening, which represents the shrinking of the young population and the gradual increase of the old population.)
+    </div>
+  </div>
 
 
+<!-- Part3 Container -->
+<div class="w3-container" id="partThree">
+  <div class="w3-content" style="max-width:700px">
+ 
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Part 3: Comparison and Future</span></h5>
+  
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+        <div class="w3-col s6 tablink">Singapore</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+        <div class="w3-col s6 tablink">Sweden</div>
+      </a>
+    </div>
+
+    <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Parental Leave</h5>
+      <p class="w3-text-grey">xx days</p><br>
     
 
+    </div>
 
-
-
-<h2> Part 3: Comparison and Future </h2>
-    <p> Will compare demographic changes, birth rates, and length of parental leave for new fathers and mothers in Singapore and Sweden in recent years. </p>
-      <p> This part will be like: </p>
-            <p>- Using bar charts to show the difference in parental leave duration between Sweden and Singapore</p>
-            <p>- Using two pie charts to compare the childcare workload of fathers and mothers in each of these two countries</p>
+    <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Parental Leave</h5>
+      <p class="w3-text-grey">xx days</p><br>
     
-     <p>Then suggest possible solutions of Singapore's demographic problem (for example, providing social support for new mothers and building a more gender-equal family environment to make sure female Singaporeans are willing to have children).</p>
-<h2> References </h2>
+
+    </div>  
+    
+  </div>
+</div>
+
+<!-- Feedback Container -->
+<div class="w3-container" id="partTwo" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Feedback</span></h5>
+    <p>Feel free to leave your feedback if you want!</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Anything you want to say" required name="Message"></p>
+      <p><button class="w3-button w3-black" type="submit">Submit</button></p>
+    </form>
+  </div>
+</div>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  <p>Thanks for watching ：）</p>
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
 
 </body>
 </html>
