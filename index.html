@@ -66,11 +66,10 @@ body, html {
 
 <!-- Add a background color and large text to the whole page -->
 <div class="w3-sand w3-grayscale w3-large">
-  
-    <p> <a href="https://docs.google.com/document/d/1A8WLb_8WC6yvJannCS6Ya7odgN1N77Z2swoBOf81cH4/edit"> Here is a link </a> to the project document. </p>
-    <p> <a href="https://docs.google.com/document/d/1jUMnRAsDk5DvvnG-OCRl-b5ofF-51nJbJYD52naq998/edit"> Here is a link </a> to week 10 diary. </p>
-    <p> <a href="https://docs.google.com/document/d/1nM6h1BfRl0_x9JhNnxJPO7TLA4x49ZkgTrjUX5lg-F4/edit"> Here is a link </a> to week 11 diary. </p>
-    <p> <a href="https://docs.google.com/document/d/1J82u6HuDDVi2Rzd3fhkwf-wjO9iFaBn9SEwimJ4xGrE/edit"> Here is a link </a> to week 12 diary. </p>
+  <p> <a href="https://docs.google.com/document/d/1A8WLb_8WC6yvJannCS6Ya7odgN1N77Z2swoBOf81cH4/edit"> Here is a link </a> to the project document. </p>
+  <p> <a href="https://docs.google.com/document/d/1jUMnRAsDk5DvvnG-OCRl-b5ofF-51nJbJYD52naq998/edit"> Here is a link </a> to week 10 diary. </p>
+  <p> <a href="https://docs.google.com/document/d/1nM6h1BfRl0_x9JhNnxJPO7TLA4x49ZkgTrjUX5lg-F4/edit"> Here is a link </a> to week 11 diary. </p>
+  <p> <a href="https://docs.google.com/document/d/1J82u6HuDDVi2Rzd3fhkwf-wjO9iFaBn9SEwimJ4xGrE/edit"> Here is a link </a> to week 12 diary. </p>
 
 <!-- Intro Container -->
 <div class="w3-container" id="introduction">
@@ -95,15 +94,30 @@ body, html {
       </div>
       
       <p><strong>Race Composition:</strong> </p>
-      <img src="resources/raceComposition.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="1000" height="666">
-          
+      <div id="popRace">
+      <canvas id="raceRatio_pie_chart" width="400" height="400"></canvas> 
+      </div>   
+      <p>The population of Singapore is composed of three main races: Chinese, Malay and Indian. Among them, Chinese make up 74.3% of the total population.</p>
 
       <p><strong>Resident Composition:</strong> </p>
-      
+      <div id="popRace">
+      <canvas id="residentsRatio_pie_chart" width="400" height="400"></canvas> 
+      </div> 
+      <p>In 2020, the population of Singapore stands at 5.45 million. Of these 5.45 million people, 4 million are residents, consisting of 3.5 million citizens and 500,000 permanent residents (PRs). The remaining 1.45 million people living in Singapore are classed as non-residents, a group consisting mainly of foreign students and individuals on work passes.</p>
       <p><strong>Gender Composition:</strong> </p>
+      <div id="popRace">
+      <canvas id="sexRatio_pie_chart" width="400" height="400"></canvas> 
+      </div>  
+      <p>The Sex Ratio in Singapore in 2020 is 109.82 males per 100 females. There are 3.09 million males and 2.81 million females in Singapore. The percentage of female population is 47.66% compare to 52.34% male population. Singapore has 0.28 million more males than females.</p>
       <p><strong>Age Composition:</strong> </p>
-
-    </div>
+      <div id="popRace">
+      <canvas id="ageRatio_pie_chart" width="400" height="400"></canvas> 
+      </div>
+      <p>With low fertility rates and longer life expectancies, Singapore’s population is ageing
+        rapidly. The proportion of citizens aged 65 and above has increased from 11.1% in 2010
+        to 18.4% in 2020. It is note worthy that the world average proportion of population ages 65 and above is only about 9%.</p>
+        <p>What causes Singapore's disproportionately high rate of ageing population? We will take this question into Part 2.</p>
+      </div>
   </div>
 
 
@@ -113,19 +127,32 @@ body, html {
       <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">Part 2: Changes and Challenges</span></h5>
       <p></p>
       <p></p>
-      <div class="w3-panel w3-leftbar w3-light-grey">
-        <p><i></i></p>
-        <p></p>
-      </div>
+
+      <p><strong>Extremely Low Fertility Rate</strong> </p>
+          <div id="popGrowth">
+          <canvas id="fertilityRate_bar_chart" width="400" height="400"></canvas> 
+          </div>
+          <p>The chart above shows that Singapore's total fertility rate (TFR) is not only lower than that of nearby countries, but also well below the world rate. And this has led to negative population growth.</p>
+
       <p><strong>Negative Population Growth</strong> </p>
                  <div id="popGrowth">
                  <canvas id="PopSize-bar-chart" width="400" height="400"></canvas> 
                  </div>
+                 <p>The chart illustrates that Singapore's population growth slows down from 2010 onwards and suddenly drops below 0 by 2020. This means that new births or new immigrants are no longer able to offset the death or out-migration of the population.</p>
 
       <p><strong>Changing Population Pyramids</strong> </p>
-        <div class="slidecontainer">
-        <input type="range" min="0" max="1" value="slider" step="0.01" class="slider" id="myRange">
-        Drag this bar to see how Singapore's population structure changed from 1970 to 2020
+      <div class="w3-panel w3-leftbar w3-light-grey">
+        <p><i></i></p>
+        <p>Click the image below to activate it and to see how Singapore's population structure changed from 1970 to 2020 :)</p>
+      </div>
+      <body onclick="character();">
+
+        <div class="board">
+          <img src="" id="hiddenimageid" width="400" height="400"/>
+        </div>
+        <p>Declining fertility rates and negative population growth have led to an increasing skewed population in Singapore: the proportion of seniors is growing while the proportion of young people is declining, resulting in a top-heavy demographic structure. And this demographic structure has put considerable pressure on both the pension system and the economic development of Singapore society. It will be a serious challenge for Singapore to face.</p>
+      </body>
+    
         </div>
     </div>
   </div>
@@ -148,20 +175,34 @@ body, html {
 
     <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
       <h5>Parental Leave</h5>
-      <p class="w3-text-grey">xx days</p><br>
+      <p class="w3-text-grey">Every qualified working mother wwill be entitled to either 16 weeks of Government-Paid Maternity Leave or 12 weeks of maternity leave, depending on whether her child is a Singapore citizen and other criteria.
+      
+      </p><br>
+      <p class="w3-text-grey"> The child's father can choose whether to take an up to 4 weeks of shared parental leave, capped at $2,500 per week, including CPF. The shared parental leave is allocated in blocks of full weeks, e.g. the wife can allocate 1 to 4 weeks of shared parental leave.
+      </p><br>
+      <h5>Female Labor Force Participation</h5>
+    </p><br>
+    <p class="w3-text-grey"> 47% in 2022.
+    </p><br>
+      
     
 
     </div>
 
     <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
       <h5>Parental Leave</h5>
-      <p class="w3-text-grey">xx days</p><br>
-    
+      <p class="w3-text-grey">Parents in Sweden are entitled to 480 days of paid parental leave when a child is born or adopted. Each parent – should they be two – is entitled to 240 of those days. If the child is born in 2016 or later, each parent has 90 days reserved exclusively for him/her. Should he/she decide not to take these, they can’t be transferred to the partner. A single parent is entitled to a full 480 days.</p><br>
+      <h5>Female Labor Force Participation</h5>
+    </p><br>
+    <p class="w3-text-grey"> 61.65% in 2021.
+    </p><br>
+      
 
     </div>  
-    
+    <p>Sweden’s efforts to achieve gender equality have paid off to quite an extent. The higher female labor force participation to some extent justifies this fact. I think one of the main reasons for Singapore's low total fertility rate is that the government does not provide women with a sufficiently gender-equitable childbirth policy. As we can see from the table above, new fathers in Singapore are allowed to choose whether to take parental leave or not, rather than being mandated to do so like new fathers in Sweden. This is likely to result in all parental leave being taken by new mothers, thus resulting in the main burden of childcare being allocated to women. To address the low willingness to have children due to gender inequality in the family, I think Singapore could try to further introduce and adapt the Swedish fertility policy into Singaporean society. This may be able to change the low fertility rate in Singapore in the future and improve the general demographic structure of Singapore.</p>
   </div>
 </div>
+
 
 <!-- Feedback Container -->
 <div class="w3-container" id="partTwo" style="padding-bottom:32px;">
